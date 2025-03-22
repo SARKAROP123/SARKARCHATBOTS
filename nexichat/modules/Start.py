@@ -1,22 +1,11 @@
 import asyncio
 import logging
-import random
-import time
-import psutil
-import config
-from nexichat import _boot_
-from nexichat import get_readable_time
-from nexichat import nexichat, mongo
-from datetime import datetime
 from pymongo import MongoClient
-from pyrogram.enums import ChatType
 from pyrogram import Client, filters
-from config import OWNER_ID, MONGO_URL, OWNER_USERNAME
-from pyrogram.errors import FloodWait, ChatAdminRequired
-from nexichat.database.chats import get_served_chats, add_served_chat
-from nexichat.database.users import get_served_users, add_served_user
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
-from nexichat.modules.helpers import (
+from pyrogram.enums import ChatType
+from pyrogram.types import Message
+from pyrogram.errors import FloodWait
+from config import OWNER_ID, MONGO_URL(
     START,
     START_BOT,
     PNG_BTN,
